@@ -30,6 +30,7 @@ To get your Steam API Key, visit https://steamcommunity.com/dev/apikey and login
 - Fix some icons not showing at all for some games in Exclude Games window
 - Make the main window interactable whilst the Exclude Games window is active
 - Fix window size so it becomes dynamic when a game with a longer title is spun
+- Remember if Dark or Light mode has been toggled when the application was previously open
 
 # Virus Scan
 
