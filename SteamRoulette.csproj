@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Resources\SteamRouletteIcon.ico</ApplicationIcon>
+    <AssemblyTitle>Steam Roulette</AssemblyTitle>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <RootNamespace>SteamRoulette</RootNamespace>
+    <StartupObject>SteamRoulette.Startup</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- App.xaml / App.xaml.cs are not used — we have a custom Main in Startup.cs
+         and a plain App.cs. Exclude them so they don't generate a duplicate class. -->
+    <Compile Remove="App.xaml.cs" />
+    <Page    Remove="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Gameloop.Vdf" Version="0.6.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SteamRouletteIcon.ico" Condition="Exists('Resources\SteamRouletteIcon.ico')" />
+    <Resource Include="Resources\SteamRouletteLogo.png" />
+  </ItemGroup>
+</Project>
